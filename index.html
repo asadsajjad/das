@@ -96,8 +96,8 @@ h1 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 180px;         /* Fixed width for consistency */
-    height: 50px;         /* Fixed height for consistency */
+    width: 180px;         
+    height: 50px;         
     border-radius: 40px;
     font-weight: 500;
     font-size: 1rem;
@@ -118,7 +118,7 @@ h1 {
 .tiktok-btn    { background: linear-gradient(135deg, #69C9D0, #EE1D52); }
 .youtube-btn   { background: linear-gradient(135deg, #FF0000, #FF4B4B); }
 
-/* Optional: Icons inside buttons */
+/* Icons inside buttons */
 .social-btn img {
     width: 24px;
     height: 24px;
@@ -218,9 +218,8 @@ h1 {
 </div>
 
 <script>
-// Automatically set countdown to 5 days from now
-const now = new Date();
-const launchDate = new Date(now.getTime() + (5 * 24 * 60 * 60 * 1000)).getTime();
+// Fixed countdown date (example: Feb 16, 2026, 12:00 PM)
+const launchDate = new Date(2026, 1, 16, 12, 0, 0).getTime();
 
 const countdown = setInterval(function() {
 
