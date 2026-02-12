@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #f6d365, #fda085);
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #d9b3ff, #e8cfff);
     background-size: 400% 400%;
     animation: gradientBG 12s ease infinite;
     color: #222;
@@ -84,25 +84,45 @@ h1 {
     opacity: 0.8;
 }
 
-/* Instagram Button */
-.instagram-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+/* Social Buttons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-top: 25px;
-    padding: 14px 32px;
-    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
-    color: #222;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.instagram-btn:hover {
-    transform: translateY(-4px);
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;         /* Fixed width for consistency */
+    height: 50px;         /* Fixed height for consistency */
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Individual Colors */
+.instagram-btn { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); color: #222; }
+.facebook-btn  { background: linear-gradient(135deg, #3b5998, #4c70ba); }
+.tiktok-btn    { background: linear-gradient(135deg, #69C9D0, #EE1D52); }
+.youtube-btn   { background: linear-gradient(135deg, #FF0000, #FF4B4B); }
+
+/* Optional: Icons inside buttons */
+.social-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
 /* Background Animation */
@@ -125,6 +145,23 @@ h1 {
 
     .time-box {
         padding: 15px 18px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .social-btn {
+        width: 160px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .social-btn img {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
     }
 }
 </style>
@@ -162,9 +199,21 @@ h1 {
         </div>
     </div>
 
-    <a href="https://instagram.com/artcreations.pk" target="_blank" class="instagram-btn">
-        @artcreations.pk
-    </a>
+    <!-- Social Buttons -->
+    <div class="social-links">
+        <a href="https://instagram.com/artcreations.pk" target="_blank" class="social-btn instagram-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"> @artcreations.pk
+        </a>
+        <a href="https://www.facebook.com/artcreations.pk/" target="_blank" class="social-btn facebook-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"> Facebook
+        </a>
+        <a href="https://www.tiktok.com/@artcreation.pk" target="_blank" class="social-btn tiktok-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TikTok"> TikTok
+        </a>
+        <a href="https://www.youtube.com/@artcreationspk" target="_blank" class="social-btn youtube-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube
+        </a>
+    </div>
 
 </div>
 
