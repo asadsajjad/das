@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Art Creations PK | Coming Soon</title>
 
-<!-- Google Font -->
+<!-- Google Font --
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -77,6 +77,185 @@ p {
     </h1>
     <p>We are working behind the scenes to bring something amazing to you.</p>
 </div>
+
+</body>
+</html>
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Creations PK | Coming Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ff3cac);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.logo {
+    width: 220px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffd700;
+    font-weight: 700;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(255,255,255,0.15);
+    padding: 20px 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    min-width: 90px;
+}
+
+.time-box h2 {
+    font-size: 2rem;
+}
+
+.time-box span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.instagram-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.instagram-btn:hover {
+    background: #ffd700;
+    transform: translateY(-3px);
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .logo {
+        width: 170px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Replace logo.png with your actual logo file name -->
+    <img src="logo.png" alt="Art Creations PK Logo" class="logo">
+
+    <h1>
+        Happiness to your events is on its way. <br>
+        <span class="highlight">Stay Tuned!</span>
+    </h1>
+
+    <div class="countdown">
+        <div class="time-box">
+            <h2 id="days">00</h2>
+            <span>Days</span>
+        </div>
+        <div class="time-box">
+            <h2 id="hours">00</h2>
+            <span>Hours</span>
+        </div>
+        <div class="time-box">
+            <h2 id="minutes">00</h2>
+            <span>Minutes</span>
+        </div>
+        <div class="time-box">
+            <h2 id="seconds">00</h2>
+            <span>Seconds</span>
+        </div>
+    </div>
+
+    <a href="https://instagram.com/artcreations.pk" target="_blank" class="instagram-btn">
+        Follow @artcreations.pk
+    </a>
+
+</div>
+
+<script>
+// SET YOUR LAUNCH DATE HERE
+const launchDate = new Date("March 30, 2026 00:00:00").getTime();
+
+const countdown = setInterval(function() {
+
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.querySelector(".countdown").innerHTML = "We Are Live!";
+    }
+
+}, 1000);
+</script>
 
 </body>
 </html>
