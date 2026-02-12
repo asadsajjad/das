@@ -1,88 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art Creations PK | Coming Soon</title>
-
-<!-- Google Font --
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ff3cac);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    color: #ffffff;
-    padding: 20px;
-}
-
-.container {
-    max-width: 700px;
-}
-
-h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.3;
-}
-
-.highlight {
-    color: #ffd700;
-}
-
-p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-    <h1>
-        Happiness to your events is on its way. <br>
-        <span class="highlight">Stay Tuned!</span>
-    </h1>
-    <p>We are working behind the scenes to bring something amazing to you.</p>
-</div>
-
-</body>
-</html>
- -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -160,20 +75,23 @@ h1 {
 }
 
 .instagram-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background: #ffffff;
-    color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    color: #222; /* elegant dark font */
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: 0.3s ease;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .instagram-btn:hover {
-    background: #ffd700;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 @keyframes gradientBG {
@@ -236,7 +154,9 @@ h1 {
 
 <script>
 // SET YOUR LAUNCH DATE HERE
-const launchDate = new Date("March 30, 2026 00:00:00").getTime();
+// Set countdown to 5 days from now
+const now = new Date();
+const launchDate = new Date(now.getTime() + (5 * 24 * 60 * 60 * 1000)).getTime();
 
 const countdown = setInterval(function() {
 
@@ -263,4 +183,3 @@ const countdown = setInterval(function() {
 
 </body>
 </html>
-
